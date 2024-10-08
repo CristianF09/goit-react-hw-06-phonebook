@@ -3,14 +3,14 @@ import { useSelector } from 'react-redux';
 import ContactListItem from './ContactListItem';
 
 const ContactList = () => {
-  // Accessing the contacts and filter from the Redux store
-  const contacts = useSelector((state) => state.contacts.items); // Adjust according to your state structure
-  const filter = useSelector((state) => state.contacts.filter); // Ensure the state path is correct
+  
+  const contacts = useSelector((state) => state.contacts.items); 
+  const filter = useSelector((state) => state.contacts.filter); 
 
-  // Check if contacts or filter are undefined
+
   if (!contacts || !filter) {
     console.error('Contacts or filter are undefined:', { contacts, filter });
-    return null; // Handle undefined state gracefully
+    return null; 
   }
 
   const filteredContacts = contacts.filter((contact) =>

@@ -1,7 +1,7 @@
 import React from 'react';
-import ContactForm from './ContactForm'; // Ensure correct import
-import ContactList from './ContactList'; // Ensure correct import
-import Filter from './Filter'; // Ensure correct import
+import ContactForm from './ContactForm'; 
+import ContactList from './ContactList';
+import Filter from './Filter'; 
 import styles from './App.module.css';
 
 const App = () => {
@@ -15,4 +15,4 @@ const App = () => {
   );
 };
 
-export default App; // Ensure this is a default export
+export default App;

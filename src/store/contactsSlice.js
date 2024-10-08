@@ -3,8 +3,8 @@ import { createSlice } from '@reduxjs/toolkit';
 const contactsSlice = createSlice({
   name: 'contacts',
   initialState: {
-    items: [], // Make sure items is an empty array initially
-    filter: '', // Make sure filter is initialized
+    items: [], 
+    filter: '', 
   },
   reducers: {
     addContact(state, action) {
