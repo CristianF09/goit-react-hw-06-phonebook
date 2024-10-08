@@ -1,41 +1,28 @@
-import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { addContact } from '../store/contactsSlice';
+import React from 'react';
+import styles from './ContactForm.module.css';
 
-const ContactForm = () => {
-  const dispatch = useDispatch();
-  const [name, setName] = useState('');
-  const [number, setNumber] = useState('');
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const newContact = {
-      id: Date.now(),
-      name,
-      number,
-    };
-    dispatch(addContact(newContact));
-    setName('');
-    setNumber('');
-  };
-
+const ContactForm = ({ onSubmit, name, number, onChange }) => {
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={onSubmit} className={styles.formContainer}>
       <input
         type="text"
+        name="name"
         value={name}
-        onChange={(e) => setName(e.target.value)}
-        placeholder="Name"
-        required
+        onChange={onChange}
+        placeholder="Contact Name"
+        className={styles.inputField}
       />
       <input
         type="tel"
+        name="number"
         value={number}
-        onChange={(e) => setNumber(e.target.value)}
-        placeholder="Number"
-        required
+        onChange={onChange}
+        placeholder="Phone Number"
+        className={styles.inputField}
       />
-      <button type="submit">Add Contact</button>
+      <button type="submit" className={styles.addButton}>
+        Add Contact
+      </button>
     </form>
   );
 };
