@@ -1,18 +1,21 @@
 import React from 'react';
-import styles from './Filter.module.css';
+import { useDispatch } from 'react-redux';
+import { setFilter } from '../store/contactsSlice'; 
 
-const Filter = ({ value, onChange }) => {
-  return (
-    <div className={styles.searchContainer}>
-      <input
-        type="text"
-        value={value}
-        onChange={onChange}
-        placeholder="Search Contacts"
-        className={styles.searchInput}
-      />
-    </div>
-  );
+const Filter = () => {
+    const dispatch = useDispatch();
+
+    const handleFilterChange = (e) => {
+        dispatch(setFilter(e.target.value));
+    };
+
+    return (
+        <input 
+            type="text" 
+            onChange={handleFilterChange} 
+            placeholder="Search contacts" 
+        />
+    );
 };
 
 export default Filter;

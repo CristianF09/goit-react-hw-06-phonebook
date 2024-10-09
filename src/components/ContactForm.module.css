@@ -1,43 +1,43 @@
 .formContainer {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center-align items */
+  align-items: center;
   width: 100%;
-  max-width: 400px; /* Maximum width for the form */
-  margin: 0 auto; /* Center the form horizontally */
-  padding: 20px; /* Padding around the form */
-  background-color: #f8f9fa; /* Light background color */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .inputField {
-  width: 100%; /* Full width for input fields */
-  padding: 12px 16px; /* Padding inside the input */
-  margin-bottom: 15px; /* Space between inputs */
-  border: 1px solid #ccc; /* Light border */
-  border-radius: 5px; /* Rounded corners for inputs */
-  font-size: 16px; /* Font size */
-  transition: border 0.3s; /* Transition effect for focus */
+  width: 100%;
+  padding: 12px 16px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border 0.3s;
 }
 
 .inputField:focus {
-  border-color: #007bff; /* Blue border on focus */
-  outline: none; /* Remove default outline */
+  border-color: #007bff; 
+  outline: none; /
 }
 
 .addButton {
-  width: 100%; /* Full width for button */
-  padding: 12px; /* Padding inside the button */
-  background-color: #007bff; /* Blue background */
-  color: #fff; /* White text color */
-  border: none; /* No border */
-  border-radius: 5px; /* Rounded corners */
-  cursor: pointer; /* Pointer cursor on hover */
-  font-size: 16px; /* Font size */
-  transition: background-color 0.3s; /* Transition effect for hover */
+  width: 100%; 
+  padding: 12px; 
+  background-color: #007bff; 
+  color: #fff; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  font-size: 16px; 
+  transition: background-color 0.3s; 
 }
 
 .addButton:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  background-color: #0056b3; 
 }

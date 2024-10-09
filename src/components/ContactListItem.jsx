@@ -1,10 +1,14 @@
 import React from 'react';
+import styles from './ContactListItem.module.css'; 
+
 
 const ContactListItem = ({ contact, onDelete }) => {
   return (
-    <li>
+    <li className={styles.contactItem}>
       {contact.name}: {contact.number}
-      <button onClick={onDelete}>Delete</button>
+      <button className={styles.deleteButton} onClick={onDelete}>
+        Delete
+      </button>
     </li>
   );
 };
