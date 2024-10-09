@@ -1,39 +1,39 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addContact } from '../store/contactsSlice'; 
+import { addContact } from '../store/contactsSlice';
 
 const ContactForm = () => {
-  const dispatch = useDispatch();
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
+  const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const contact = {
-      id: Date.now(), 
+    const newContact = {
+      id: Date.now(),
       name,
       number,
     };
-    dispatch(addContact(contact)); 
-    setName(''); 
-    setNumber(''); 
+    dispatch(addContact(newContact));
+    setName('');
+    setNumber('');
   };
 
   return (
     <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        placeholder="Contact Name"
-        required
+      <input 
+        type="text" 
+        value={name} 
+        onChange={(e) => setName(e.target.value)} 
+        placeholder="Name" 
+        required 
       />
-      <input
-        type="tel"
-        value={number}
-        onChange={(e) => setNumber(e.target.value)}
-        placeholder="Contact Number"
-        required
+      <input 
+        type="text" 
+        value={number} 
+        onChange={(e) => setNumber(e.target.value)} 
+        placeholder="Phone number" 
+        required 
       />
       <button type="submit">Add Contact</button>
     </form>
